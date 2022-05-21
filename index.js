@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const generatePage = require("./src/generate-page");
+const writeFile = require("./utils/files");
 
 const employees = [];
 
