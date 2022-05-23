@@ -2,7 +2,7 @@ const generateEmployeeInfo = (employees) => {
   const html = [];
   const generateManager = (manager) => {
     console.log(manager);
-    let managerInfo = ` 
+    let managerData = ` 
         <div class="card" style="width: 18rem;">
             <div class="card-header">
            ${manager.name} <br/>
@@ -10,15 +10,15 @@ const generateEmployeeInfo = (employees) => {
            <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${manager.id}</li>
             <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+            <li class="list-group-item">Office Number: ${manager.office}</li>
             </ul>
         </div>
         `;
-    html.push(managerInfo);
+    html.push(managerData);
   };
   const generateEngineer = (engineer) => {
     console.log(engineer);
-    let engineerInfo = ` 
+    let engineerData = ` 
         <div class="card" style="width: 18rem;">
             <div class="card-header">
            ${engineer.name} <br/>
@@ -26,15 +26,15 @@ const generateEmployeeInfo = (employees) => {
            <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.id}</li>
             <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.githubUsername}">${engineer.githubUsername}</a></li>
+            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></li>
             </ul>
         </div>
         `;
-    html.push(engineerInfo);
+    html.push(engineerData);
   };
   const generateIntern = (intern) => {
     console.log(intern);
-    let internInfo = ` 
+    let internData = ` 
         <div class="card" style="width: 18rem;">
             <div class="card-header">
            ${intern.name} <br/>
@@ -46,7 +46,7 @@ const generateEmployeeInfo = (employees) => {
             </ul>
         </div>
         `;
-    html.push(internInfo);
+    html.push(internData);
   };
   console.log(employees);
 
