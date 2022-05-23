@@ -6,6 +6,8 @@ https://github.com/sterlingpeck/Team-Profile-Generator
 
 Displays my teams basic info so that I have quick access to their emails and Github profiles
 
+![image](https://user-images.githubusercontent.com/99343588/169850331-27db7251-783c-4ef5-8dff-bab24daa28f5.png)
+
 # Table of Contents
 
 - [Installation](#installation)
