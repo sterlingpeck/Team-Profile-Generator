@@ -111,7 +111,7 @@ internAlert = () => {
         internData.internSchool
       );
       employees.push(intern);
-      return addEmployeesAlert();
+      return addEmployeesMenu();
     });
 };
 
@@ -119,24 +119,23 @@ addEmployeesMenu = () => {
   return inquirer
     .prompt({
       type: "list",
-      name: "addEmployees",
+      name: "moreEmployees",
       message: "Would you like to add another employee to the team?",
       choices: ["An engineer", "An intern", "No, I'm done"],
     })
     .then((userAnswer) => {
-      switch (userAnswer.menu) {
+      switch (userAnswer.moreEmployees) {
         case "An engineer":
           return engineerAlert();
         case "An intern":
-          return internAlertt();
+          return internAlert();
         case "No, I'm done":
-          console.log(employees);
           return employees;
       }
     });
 };
 
-managerAlert()
+managerAlert(employees)
   .then((employeeData) => {
     return generatePage(employeeData);
   })
