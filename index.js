@@ -119,12 +119,12 @@ addEmployeesMenu = () => {
   return inquirer
     .prompt({
       type: "list",
-      name: "moreEmployees",
+      name: "addEmployees",
       message: "Would you like to add another employee to the team?",
       choices: ["An engineer", "An intern", "No, I'm done"],
     })
     .then((userAnswer) => {
-      switch (userAnswer.moreEmployees) {
+      switch (userAnswer.addEmployees) {
         case "An engineer":
           return engineerAlert();
         case "An intern":
